@@ -1,0 +1,5 @@
+{
+  "plugins": [
+    ["./plugins/index.js", { "name": "any" }]
+  ]
+}

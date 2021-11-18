@@ -1,0 +1,21 @@
+{
+  "name": "babel-plugin-any",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:maxmeng93/babel-plugin-any.git",
+  "author": "maxmeng93 <maxmeng93@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx babel ./src/index.js --out-file ./build/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
