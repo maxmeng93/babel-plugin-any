@@ -14,20 +14,20 @@ module.exports = function (api) {
         const { node } = path;
         if (!node) return;
 
-        if (path.node.name === 'sum') {
+        if (node.name === 'sum') {
           // 拿到当前 Identifier 的父节点也就是整个表达式
           const parent = path.parent;
-          const args = parent.arguments;
 
           if (parent.type === 'CallExpression') {
 
             const params = t.arrayExpression();
+            const args = parent.arguments;
 
             for (let i = 0; i < args.length; i++) {
               params.elements.push(args[i]);
             }
             parent.arguments = [params];
-            path.skip();
+            return;
           }
 
           if (parent.type === 'FunctionDeclaration') {
@@ -56,7 +56,7 @@ module.exports = function (api) {
               return nums.reduce((sum, next) => sum + next, 0);
             }`)();
 
-            path.skip();
+            return;
           }
         }
       },
