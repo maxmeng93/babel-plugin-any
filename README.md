@@ -15,3 +15,9 @@ yarn
 ```bash
 yarn test
 ```
+
+## build 插件
+
+```bash
+yarn build
+```
